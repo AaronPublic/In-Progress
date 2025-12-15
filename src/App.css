@@ -1,0 +1,212 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.NavBar {
+  background-color: rgba(30, 30, 30, 0.95);
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 20px;
+}
+
+a:hover{
+  color: #7ba1a9;
+
+}
+
+
+.MainSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
+  background: linear-gradient(90deg, #1a1a1a 0%, #2c3e50 50%, #1a1a1a 100%);
+}
+
+button{
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #00bcd4;
+  border: none;
+}
+
+button:hover{
+  background-color: #0097a7;
+  cursor: pointer;
+}
+
+
+.Information {
+  flex: 2;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.ProfilePicture {
+  flex: 1;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TechImage{
+  width: 80px;
+  margin: 20px;
+}
+
+.TechImagejs{
+  width: 93px;
+  margin: 20px;
+}
+.Footer {
+  background-color: #1e1e1e;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 10px;
+}
+/* Media Queries */
+/* GLOBAL SMOOTHNESS */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* NAVBAR ANIMATION */
+.NavBar {
+  animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* NAV LINKS */
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #64ffda;
+  transition: all 0.3s ease;
+}
+
+a:hover::after {
+  width: 60%;
+  left: 20%;
+}
+
+/* MAIN SECTION FADE */
+.MainSection {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* BUTTON POWER EFFECT */
+button {
+  box-shadow: 0 0 0 rgba(100, 255, 218, 0);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.35);
+}
+
+/* INFORMATION TEXT ENTRANCE */
+.Information {
+  animation: slideLeft 1s ease forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* PROFILE IMAGE FLOATING */
+.ProfilePicture {
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* TECH ICON FLOAT */
+.TechImage,
+.TechImagejs {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER REVEAL */
+.Footer {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
