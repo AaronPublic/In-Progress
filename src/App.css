@@ -10,14 +10,14 @@
   justify-content: space-around;
 }
 
-a{
+a {
   text-decoration: none;
   color: #ffffff;
   padding: 20px;
   font-size: 20px;
 }
 
-a:hover{
+a:hover {
   color: #7ba1a9;
 
 }
@@ -33,7 +33,39 @@ a:hover{
   background: linear-gradient(90deg, #1a1a1a 0%, #2c3e50 50%, #1a1a1a 100%);
 }
 
-button{
+@media (max-width: 600px) {
+
+  body, html{
+    overflow-x: hidden;
+  }
+  .MainSection {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .Footer{
+    height: auto;
+  }
+
+  .Information{
+    padding: 10px;
+  }
+
+  .TechImage, .TechImagejs {
+    width: 60px;
+    margin: 10px;
+  }
+
+  .ProfilePicture{
+    padding-left: 30px;
+    order: -1;
+  }
+    
+}
+
+
+
+button {
   padding: 10px;
   margin: 20px;
   border-radius: 10px;
@@ -41,7 +73,7 @@ button{
   border: none;
 }
 
-button:hover{
+button:hover {
   background-color: #0097a7;
   cursor: pointer;
 }
@@ -61,21 +93,24 @@ button:hover{
   align-items: center;
 }
 
-.TechImage{
+.TechImage {
   width: 80px;
   margin: 20px;
 }
 
-.TechImagejs{
+.TechImagejs {
   width: 93px;
   margin: 20px;
 }
+
 .Footer {
   background-color: #1e1e1e;
   color: #aaaaaa;
   text-align: center;
   padding: 10px;
+
 }
+
 /* Media Queries */
 /* GLOBAL SMOOTHNESS */
 * {
@@ -92,6 +127,7 @@ button:hover{
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -129,6 +165,7 @@ a:hover::after {
     opacity: 0;
     transform: scale(0.98);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -155,6 +192,7 @@ button:hover {
     opacity: 0;
     transform: translateX(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -171,6 +209,7 @@ button:hover {
     opacity: 0;
     transform: translateX(40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -187,9 +226,11 @@ button:hover {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -205,6 +246,7 @@ button:hover {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
