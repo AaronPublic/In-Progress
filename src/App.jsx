@@ -7,7 +7,7 @@ import js from"./assets/Images/js.png";
 
 let firstName = "Aaron";
 let lastName = "Laxamana";
-let Course = "BSIT Student"
+let Course = "Bachelor of Science in Information Technology"
 function fb(){
   window.location.href = "https://www.facebook.com/Aarooonnnnnn";
 }
@@ -18,6 +18,9 @@ function github(){
 function App() {
   return (
     <div className="Container">
+      <div className="Logo">
+
+      </div>
       <div className="NavBar">
         <a href="https://www.linkedin.com/in/aaron-laxamana-692b2533a/">LinkedIn</a>
         <a href="https://github.com/amlaxamana">GitHub</a>
@@ -25,9 +28,9 @@ function App() {
       </div>
       <div className="MainSection">
         <div className="Information">
-          <h1>Hello, I'm {firstName} {lastName}</h1>
-          <p>
-            I am a {Course} with a passion for creating innovative solutions and learning new technologies.
+          <h1>Hello, I am {firstName} {lastName}</h1>
+          <p className="Description">
+            Highly motivated {Course} student with a dedicated focus on developing innovative, scalable solutions. Possesses a strong academic foundation in system architecture and a proactive commitment to mastering emerging technologies and industry best practices.
           </p>
           <div className="Buttons">
             <button onClick={fb}>Let's Connect</button>
@@ -46,6 +49,9 @@ function App() {
             <img className="TechImagejs" src={js} alt="Tech Stack" />
           </div>
         </div>
+      </div>
+      <div className="Projects">
+        <h1 className="Title">Projects</h1>
       </div>
       <div className="Footer">
         <p>© 2024 {firstName} {lastName}. All rights reserved.</p>
